@@ -3,5 +3,5 @@
 @section('title', 'Index')
 
 @section('content')
-    <pdflist></pdflist>
+    hello world
 @endsection

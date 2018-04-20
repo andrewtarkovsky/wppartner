@@ -1,6 +1,6 @@
-## PdfList sample project
+## Wordpress Partner sample project
 
-Project requirements: php7.1+, nginx, npm, composer, imagick
+Project requirements: php7.1+, nginx, npm, composer
 
 Project deployment: steps
 
@@ -9,16 +9,7 @@ You can get more info on how to setup it here: https://laravel.com/docs/5.6/home
 
 To install the project, you need to:
 
-cmd: git clone https://github.com/andrewtarkovsky/pdflist.git
-
-Install imagick
-
-1. cmd: sudo apt-get update
-2. cmd: sudo apt-get install pkg-config libmagickwand-dev -y
-3. cmd: sudo pecl install imagick-beta
-4. cmd: Edit your system's active php cli ini file(normally /etc/php/7.2/cli/php.ini), add 'extension=imagick.so' to other extensions
-5. cmd: Edit your system's active php fpm ini file(normally /etc/php/7.2/fpm/php.ini), add 'extension=imagick.so' to other extensions
-6. cmd: sudo service nginx restart
+cmd: git clone https://github.com/andrewtarkovsky/wppartner.git
 
 Proceed with dependency installation
 
