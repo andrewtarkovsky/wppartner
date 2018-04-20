@@ -20,3 +20,13 @@ Proceed with dependency installation
 5. cmd: php artisan migrate
 
 Now, the site should be available on the location you've chosen for it in nginx sites-available/YOURSITENAME.conf file
+
+To use wordpress plugin:
+ 1. copy all the content of "wordpress_plugin" folder into your Wordpress installation folder ("wp-content/plugins");
+ 2. Go to wordpress administration gui panel and activate plugin "VF Comment Ratings";
+ 3. Alter path to current project (look for "API_URL" constant in "vfcommentratings.php", currently "http://wppartner.test");
+ 4. Go to post, give it a rating and comment and submit your opinion;
+ 5. Bingo, your rating should be included under current project '/' url list.
+ 
+ 
+ To check local project for possible problems, use "phpunit" command in server console
