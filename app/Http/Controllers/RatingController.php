@@ -20,15 +20,20 @@ class RatingController extends Controller
      */
     public function save(Request $request) {
 
-        $defaultRating = 5;
-        $defaultPostId = 999;
+        $request->validate([
+            'author' => 'required',
+            'rating' => 'required|integer|between:1,5',
+            'post_id' => 'required',
+            'post_title' => 'required',
+            'comment' => 'required'
+        ]);
 
         $rating = new Rating();
-        $rating->author = $request->author ? : 'author';
-        $rating->rating = $request->rating ? : $defaultRating;
-        $rating->post_id = $request->post_id ? : $defaultPostId;
-        $rating->post_title = $request->post_title ? : 'test';
-        $rating->comment = $request->comment ? : '';
+        $rating->author = $request->author;
+        $rating->rating = $request->rating;
+        $rating->post_id = $request->post_id;
+        $rating->post_title = $request->post_title;
+        $rating->comment = $request->comment;
         $rating->save();
 
         $average = Rating::where('post_id', $rating->post_id)->avg('rating');
