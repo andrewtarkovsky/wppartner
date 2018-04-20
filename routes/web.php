@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/api/rating/preview', 'RatingController@preview');
+Route::get('/api/rating/save', 'RatingController@save');
+Route::post('/api/rating/save', 'RatingController@save');

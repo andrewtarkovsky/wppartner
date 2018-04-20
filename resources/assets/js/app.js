@@ -16,6 +16,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
+Vue.component('rating-list-preview', require('./components/RatingListPreviewComponent.vue'));
 
 const app = new Vue({
     el: '#app'
