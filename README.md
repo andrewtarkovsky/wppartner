@@ -18,6 +18,5 @@ Proceed with dependency installation
 3. cmd: npm run dev
 4. create .env file in the root of the project, fill it with data form .env.example (right beside it)
 5. cmd: php artisan migrate
-6. cmd: php artisan storage:link
 
 Now, the site should be available on the location you've chosen for it in nginx sites-available/YOURSITENAME.conf file
